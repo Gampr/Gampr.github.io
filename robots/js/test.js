@@ -1,7 +1,4 @@
-var game = new Phaser.Game(480, 320, Phaser.AUTO, 'phaser-example', { preload: preload, create: create, update: update });
-
-var button_width = 190;
-
+var game = new Phaser.Game(480, 320, Phaser.AUTO, 'phaser-game', { preload: preload, create: create, update: update });
 
 
 function preload() {
@@ -9,8 +6,6 @@ function preload() {
 	game.scale.pageAlignHorizontally = true;
 	game.scale.pageAlignVertically = true;
 	
-	game.load.image('background', 'pics/ra_einstein.png');
-	game.load.spritesheet('run_button', 'sprites/button_run_sprite.png', button_width, 70)
 	game.load.image('brick', 'pics/brick.png')
 }
 
@@ -26,20 +21,20 @@ function create() {
 
 	//  This creates a simple sprite that is using our loaded image and
 	//  displays it on-screen
-	game.stage.backgroundColor = '#182d3b';
+	game.stage.backgroundColor = '#50BB80';
 
 
 
-   	background = game.add.tileSprite(0, 0, 480, 320, 'background');
+   	// background = game.add.tileSprite(0, 0, 480, 320, 'background');
    
-	run_button = game.add.button(game.world.centerX - button_width/2, 200, 'run_button', actionOnClick, this, 2, 1, 0);
+	// run_button = game.add.button(game.world.centerX - button_width/2, 200, 'run_button', actionOnClick, this, 2, 1, 0);
 	initBricks();	
 }
 
 function update() {
     // game.physics.arcade.collide(ball, paddle);
     // paddle.x = game.input.x || game.world.width*0.5;
-	console.log(start);
+	// console.log(start);
 	
 	
 		bricks.children[0].x += bricks.children[0].dx;
@@ -65,8 +60,8 @@ function update() {
 
 function initBricks() {
 	brickInfo = {
-	    width: 50,
-	    height: 20,
+	    width: 30,
+	    height: 30,
 	    count: {
 	        row: 3,
 	        col: 3
@@ -118,3 +113,19 @@ function actionOnClick () {
 	}
 	start = !start;
 }
+
+
+document.getElementById("runBtn").addEventListener("click", actionOnClick);
+
+document.getElementById("progBtn").addEventListener("click", function(){
+    document.getElementById("prog").style.display='block';
+});
+
+document.getElementById('prog').onclick=function(event) {
+	var target = event.target;
+	if (target.id == 'prog' || target.className == 'closeProgWindow') {
+		document.getElementById("prog").style.display='none';
+	}
+}
+
+document.getElementById('cancelProg').addEventListener("")

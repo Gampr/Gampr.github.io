@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+	<head>
+		<meta charset="utf-8">
+		<title>Robots game</title>
+
+		<!-- Place favicon.ico in the root directory -->
+		<link rel="shortcut icon" href="favicon.ico">
+		
+		<!-- My CSS theme -->
+		<link rel="stylesheet" href="css/theme.css">
+
+		<script src="js/phaser.js"></script>
+		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<script src="js/jquery.magnific-popup.js"></script>
+	</head>
+	<body>
+		<div class="main">
+			<div class="tab_content">
+				<div id="phaser-game"></div>	
+			</div>
+			<button id="runBtn">Run</button>
+			<button id="progBtn">Prog</button>
+		</div>
+		
+		<div id="prog">
+			<div class="main">
+				<div class="radioBtn">
+					<input name="leftEngine" type="radio">Turn On</input>
+					<input name="leftEngine" type="radio">Nothing</input>
+					<input name="leftEngine" type="radio">Turn Off</input>
+				</div>
+				<button id="applyBtn" class="btn">Aply</button>
+				<button id="cancelBtn" class="btn">Cancel</button>
+			</div>
+			<span class="closeProgWindow">&times;</span>
+		</div>
+
+		<!-- Test JS -->	
+		<script src="js/test.js"></script>
+		<script>
+			$( function() {
+				$( "#draggable" ).draggable();
+			} );
+		</script>
+
+		<noscript>Sorry, your browser does not support JavaScript!</noscript>
+		
+	</body>
+</html>
+

@@ -1,0 +1,54 @@
+html,body { 
+	min-height: 100%; 
+	margin: 0px; 
+	padding: 0px; 
+	background: #817FBC;
+}
+
+.main {
+	z-index: 6;
+	min-height: 100%;
+	background: #5C2C90;
+	min-width: 400px;
+	max-width: 60%;
+	margin: 10px auto;
+	padding: 5px;
+}
+
+
+.tab_content {
+	color: #8BC34A;
+	border: 1px solid #134567;
+	position: relative;
+	z-index: 1;
+	top: -1px;
+	padding: 10px;
+	border-radius: 0 0 3px 3px;
+	background: #00A44F;
+}
+
+#myBtn {
+	relative: relative;
+	top: 30%;
+	left: 30%;
+}
+
+#prog {
+	top: 0;
+	left: 0;
+	z-index: 7;
+	position: fixed;
+	width: 100%;
+	min-height: 100%;
+	display: none;
+	background: rgba(0,0,0,0.8)
+}
+
+.closeProgWindow {
+	color: white;
+    font-size: 1.5em;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 5px;
+}
