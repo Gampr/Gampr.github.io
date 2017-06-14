@@ -56,7 +56,7 @@ a:hover {
   top:0;
   left: 0;
   z-index: 1;
-  background-image: url('empty.gif');
+  /* background-image: url('empty.gif'); */
 }
 
 .left_link a:hover {
